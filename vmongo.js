@@ -1,0 +1,140 @@
+const express = require("express");
+const mongoose=require("mongoose");
+const app= express();
+mongoose.connect("mongodb://localhost:27017/vehicle",{
+    useNewUrlParser: true,
+  useUnifiedTopology: true,
+  family:4
+})
+.then(()=>{
+    console.log("connected");
+})
+.catch(()=>{
+    console.log(Error);
+})
+const logindesign=new mongoose.Schema({
+    fname:{
+        type:String,
+        required:true
+    },
+    mno:{
+        type:Number,
+        required:true
+    },
+    add:{
+        type:String,
+        required:true
+    },
+    city:{
+        type:String,
+        required:true
+    },
+    prof:{
+        type:String,
+        required:true
+    },
+    cname:{
+        type:String,
+        required:true
+    },
+    lname:{
+        type:String,
+        required:true
+    },
+    em:{
+        type:String,
+        required:true
+    },
+    state:{
+        type:String,
+        required:true 
+    },
+    inc:{
+        type:Number,
+        required:true
+    },
+    cno:{
+        type:Number,
+        required:true
+    },
+    vehicle:{
+        type:String,
+        required:true 
+    },
+    vehcomp:{
+        type:String,
+        required:true 
+    },
+    vehmake:{
+        type:String,
+        required:true 
+    },
+    yrofman:{
+        type:Number,
+        required:true 
+    },
+    use:{
+        type:String,
+        required:true 
+    },
+    owners:{
+        type:Number,
+        required:true 
+    },
+    vehexp:{
+        type:String,
+        required:true 
+    },
+    color:{
+        type:String,
+        required:true 
+    },
+    regno:{
+        type:String,
+        required:true 
+    },
+    code:{ 
+        type:String,
+        required:true 
+    },
+    eng:{
+        type:String,
+        required:true 
+    },
+    chas:{
+        type:String,
+        required:true 
+    },
+    fuel:{
+        type:String,
+        required:true 
+    },
+    fea:{
+        type:String,
+        required:true 
+    },
+    tyre:{
+        type:String,
+        required:true 
+    },
+    market:{
+        type:Number,
+        required:true 
+    },
+    amo:{
+        type:Number,
+        required:true 
+    },
+    insreq:{
+        type:String,
+        required:true 
+    },
+    intreq:{
+        type:Number,
+        required:true 
+    }
+    
+   
+});
+const collection = new mongoose.model("vehicledetails",logindesign);
+module.exports=collection;

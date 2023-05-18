@@ -1,0 +1,35 @@
+const express = require("express");
+const mongoose=require("mongoose");
+const app= express();
+mongoose.connect("mongodb://localhost:27017/dblogin",{
+    useNewUrlParser: true,
+  useUnifiedTopology: true,
+  family:4
+})
+.then(()=>{
+    console.log("connected");
+})
+.catch(()=>{
+    console.log(Error);
+})
+const logindesign=new mongoose.Schema({
+    fname:{
+        type:String,
+        required:true
+    },
+    lname:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    pass:{
+        type:String,
+        required:true
+    }
+   
+});
+const collection = new mongoose.model("login det",logindesign);
+module.exports=collection;

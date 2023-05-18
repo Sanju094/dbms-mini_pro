@@ -1,0 +1,128 @@
+const express = require("express");
+const mongoose=require("mongoose");
+const app= express();
+mongoose.connect("mongodb://localhost:27017/house",{
+    useNewUrlParser: true,
+  useUnifiedTopology: true,
+  family:4
+})
+.then(()=>{
+    console.log("connected");
+})
+.catch(()=>{
+    console.log(Error);
+})
+const logindesign=new mongoose.Schema({
+    fname:{
+        type:String,
+        required:true
+    },
+    mno:{
+        type:Number,
+        required:true
+    },
+    add:{
+        type:String,
+        required:true
+    },
+    city:{
+        type:String,
+        required:true
+    },
+    prof:{
+        type:String,
+        required:true
+    },
+    cname:{
+        type:String,
+        required:true
+    },
+    lname:{
+        type:String,
+        required:true
+    },
+    em:{
+        type:String,
+        required:true
+    },
+    state:{
+        type:String,
+        required:true 
+    },
+    inc:{
+        type:Number,
+        required:true
+    },
+    cno:{
+        type:Number,
+        required:true
+    },
+    onam:{
+        type:String,
+        required:true 
+    },
+    hloc:{
+        type:String,
+        required:true 
+    },
+    thou:{
+        type:String,
+        required:true 
+    },
+    blue:{
+        type:String,
+        required:true 
+    },
+    water:{
+        type:String,
+        required:true 
+    },
+    wtc:{
+        type:Number,
+        required:true 
+    },
+    rsr:{
+        type:String,
+        required:true 
+    },
+    fmb:{
+        type:String,
+        required:true 
+    },
+    topa:{
+        type:String,
+        required:true 
+    },
+    lmv:{ 
+        type:Number,
+        required:true 
+    },
+    gv:{
+        type:String,
+        required:true 
+    },
+    motc:{
+        type:Number,
+        required:true 
+    },
+    serv:{
+        type:String,
+        required:true 
+    },
+    amount:{
+        type:Number,
+        required:true 
+    },
+    insreq:{
+        type:String,
+        required:true 
+    },
+    intreq:{
+        type:Number,
+        required:true 
+    }
+    
+   
+});
+const collection = new mongoose.model("housedetails",logindesign);
+module.exports=collection;

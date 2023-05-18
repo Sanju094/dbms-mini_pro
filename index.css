@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'Poppins' , sans-serif ;
+
+}
+#navbar{
+    background-color: rgb(18, 21, 101);
+}
+h1{
+    text-align:justify;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#navbar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+section{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ----------Navbar--------- */
+
+.bold{
+    font-weight:bolder;
+    font-style:oblique;
+    color:black;
+    font-size: 30px;
+}
+
+li{
+    padding:6px;
+}
+
+.nav-link{
+    color: antiquewhite;
+    font-size:15px;
+    font-weight: bold;
+    border:2px solid transparent;
+}
+.nav-link:hover{
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: .1s;
+}
+
+#why_financia{
+    background-color:whitesmoke;
+    height: 110vh;
+}
